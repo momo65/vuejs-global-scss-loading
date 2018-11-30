@@ -1,0 +1,19 @@
+First of all, you have to make sure that you have sass-loader style-loader and node-sass installed, then you have to create a new 
+vue.config.js file that contains the following lines:
+module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/scss/_colors.scss";  // here you put the paths to your scss files
+        `
+      }
+    }
+  }
+};
+
+You have to put this   @import "@/scss/_colors.scss";    between   `` .
+
+"@/scss/_colors.scss" ,  '@' is an alias that refers to '/src' which is the src folder that resides in the root directory of the app.
+Finally you can use all your variables from your scss files without even importing them in the style section of the .vue files.
+(That might mean that you have to make sure that all your variables in your scss files have unique names)
