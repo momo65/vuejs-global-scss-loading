@@ -17,3 +17,5 @@ You have to put this   @import "@/scss/_colors.scss";    between   `` .
 "@/scss/_colors.scss" ,  '@' is an alias that refers to '/src' which is the src folder that resides in the root directory of the app.
 Finally you can use all your variables from your scss files without even importing them in the style section of the .vue files.
 (That might mean that you have to make sure that all your variables in your scss files have unique names)
+
+the link to the blog explaining this one :https://vueschool.io/articles/vuejs-tutorials/globally-load-sass-into-your-vue-js-applications/
